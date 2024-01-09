@@ -1,0 +1,85 @@
+.container{
+    width: 100vw;
+    height: 100vh;
+    background: #143b71;
+    box-sizing: border-box;
+    padding: 68px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    .title{
+        color: #00ffff;
+        font-size: 34px;
+        text-align: center;
+        margin-bottom: 110px;
+    }
+    .content{
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        min-height: 0;
+        position: relative;
+        .weather{
+            position: absolute;
+            left: 257px;
+            top: -130px;
+            color: #2aff33;
+            text-align: center;
+            line-height: 24px;
+            .temperature{
+                .value{
+                    font-size: 22px;
+                    margin: 5px;
+                }
+            }
+        }
+        .center{
+            height: inherit;
+            box-sizing: border-box;
+            margin: 0 10px;
+            display: flex;
+            flex-direction: column;
+            #img{
+                height: 500px;
+            }
+        }
+        .side{
+            background: #1f4775;
+            width: 257px;
+            color: rgba(255,255,255,0.9);
+            .name{
+                padding: 40px;
+                text-align: center;
+            }
+            .list{
+                display: flex;
+                flex-wrap: wrap;
+                .item{
+                    width: calc(50% - 10px);
+                    margin: 5px;
+                    background: #1b407b;
+                    text-align: center;
+                    font-size: 12px;
+                    height: fit-content;
+                    .describe{
+                        background: #1f4784;
+                        height: 45px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    .context{
+                        box-sizing: border-box;
+                        padding: 15px 0;
+                        div:first-child{
+                            margin-bottom: 20px;
+                        }
+                    }
+                    &:nth-child(4n){
+                        margin-bottom: 40px;
+                    }
+                }
+            }
+        }
+    }
+}
