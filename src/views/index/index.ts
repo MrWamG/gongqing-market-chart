@@ -48,10 +48,16 @@ export default defineComponent({
     created() {
         this.init();
     },
+    mounted(){
+        window.addEventListener("resize",this.scale);
+    },
     destroyed() {
 
     },
     methods: {
+        scale(){
+            (this.$refs.Customer as any).resize();
+        },
         init(){
             // 获取天气
             apis.weather().then(({data}:{data:any})=>{

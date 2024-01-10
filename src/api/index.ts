@@ -13,6 +13,9 @@ export function enviroment(){
     return axios({
         url:"/api/vibe/api/v1/device/lastdp?did=36856",
         method:"get",
+        headers: {
+            "X-Shareid":"Ig3xhLJwGiv9madecnVwZwjGBknNC8UR"
+        }
     })
 }
 

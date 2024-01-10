@@ -29,6 +29,11 @@ export default defineComponent({
 
     },
     methods: {
+        resize(){
+            const chartDom = document.getElementById("customer");
+            this.chart.setOption(this.option);
+            this.chart.resize();
+        },
         init(){
             const chartDom = document.getElementById("customer");
             // 图片加载完毕后（等待父级宽度被图片撑开）再载入 echart，避免出现 0 宽度
@@ -66,7 +71,7 @@ export default defineComponent({
                     type: 'category',
                     boundaryGap: false,
                     data: this.data.map(item=>{
-                        return dayjs(item.f_date).format("YYYY-MM-DD HH:mm:ss")
+                        return item.f_time_s
                     }),
                     axisLabel: {
                         // X 轴文字颜色
